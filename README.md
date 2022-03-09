@@ -6,3 +6,13 @@ https://training.github.com/
 
 # Notes:
 Only push to the master when you have confirmed that it is working as a whole. DO NOT work in the master branch, always work in a private branch. 
+
+# File structure in this git repo
+
+                            master
+                              |
+                        developement
+                              |
+                    ----------------------
+                    |                    |
+            editing branch 1      editing branch 2  
