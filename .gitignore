@@ -1,5 +1,36 @@
-# Created by .ignore support plugin (hsz.mobi)
-### Python template
+videos/
+*.zip
+centernet_models/*
+centertrack_models/*
+*/slurm-*.out
+src/slurm/
+results/*
+src/lib/models/networks/DCNv2
+src/lib/models/networks/DCNv2_04
+src/lib/models/networks/DCNv2_10
+src/lib/model/networks/DCNv2
+src/lib/model/networks/DCNv2_04
+src/lib/model/networks/DCNv2_10
+.idea/
+legacy/*
+models/*
+.DS_Store
+debug/*
+*.DS_Store
+data
+!src/tools/eval_kitti_track/data
+exp
+exp/*
+*.json
+*.mat
+models/*
+model/*
+src/.vscode/*
+src/paths.py
+preds/*
+*.h5
+*.pth
+*.checkpoint
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -17,11 +48,11 @@ dist/
 downloads/
 eggs/
 .eggs/
-lib/
 lib64/
 parts/
 sdist/
 var/
+wheels/
 *.egg-info/
 .installed.cfg
 *.egg
@@ -44,7 +75,7 @@ htmlcov/
 .cache
 nosetests.xml
 coverage.xml
-*,cover
+*.cover
 .hypothesis/
 
 # Translations
@@ -68,7 +99,7 @@ docs/_build/
 # PyBuilder
 target/
 
-# IPython Notebook
+# Jupyter Notebook
 .ipynb_checkpoints
 
 # pyenv
@@ -77,79 +108,26 @@ target/
 # celery beat schedule file
 celerybeat-schedule
 
+# SageMath parsed files
+*.sage.py
+
 # dotenv
 .env
 
 # virtualenv
+.venv
 venv/
 ENV/
 
 # Spyder project settings
 .spyderproject
+.spyproject
 
 # Rope project settings
 .ropeproject
-### VirtualEnv template
-# Virtualenv
-# http://iamzed.com/2009/05/07/a-primer-on-virtualenv/
-.Python
-[Bb]in
-[Ii]nclude
-[Ll]ib
-[Ll]ib64
-[Ll]ocal
-[Ss]cripts
-pyvenv.cfg
-.venv
-pip-selfcheck.json
-### JetBrains template
-# Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm, CLion, Android Studio and Webstorm
-# Reference: https://intellij-support.jetbrains.com/hc/en-us/articles/206544839
 
-# User-specific stuff:
-.idea/workspace.xml
-.idea/tasks.xml
-.idea/dictionaries
-.idea/vcs.xml
-.idea/jsLibraryMappings.xml
+# mkdocs documentation
+/site
 
-# Sensitive or high-churn files:
-.idea/dataSources.ids
-.idea/dataSources.xml
-.idea/dataSources.local.xml
-.idea/sqlDataSources.xml
-.idea/dynamic.xml
-.idea/uiDesigner.xml
-
-# Gradle:
-.idea/gradle.xml
-.idea/libraries
-
-# Mongo Explorer plugin:
-.idea/mongoSettings.xml
-
-.idea/
-
-## File-based project format:
-*.iws
-
-## Plugin-specific files:
-
-# IntelliJ
-/out/
-
-# mpeltonen/sbt-idea plugin
-.idea_modules/
-
-# JIRA plugin
-atlassian-ide-plugin.xml
-
-# Crashlytics plugin (for Android Studio and IntelliJ)
-com_crashlytics_export_strings.xml
-crashlytics.properties
-crashlytics-build.properties
-fabric.properties
-
-# Vscode
-.vscode/*
-*.json
+# mypy
+.mypy_cache/
