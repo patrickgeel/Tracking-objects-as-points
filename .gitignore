@@ -1,10 +1,10 @@
+data/
 videos/
 *.zip
 centernet_models/*
 centertrack_models/*
 */slurm-*.out
 src/slurm/
-results/*
 src/lib/models/networks/DCNv2
 src/lib/models/networks/DCNv2_04
 src/lib/models/networks/DCNv2_10
@@ -13,23 +13,18 @@ src/lib/model/networks/DCNv2_04
 src/lib/model/networks/DCNv2_10
 .idea/
 legacy/*
-models/*
 .DS_Store
 debug/*
 *.DS_Store
-data
 !src/tools/eval_kitti_track/data
 exp
 exp/*
 *.json
 *.mat
-models/*
-model/*
 src/.vscode/*
 src/paths.py
 preds/*
 *.h5
-*.pth
 *.checkpoint
 # Byte-compiled / optimized / DLL files
 __pycache__/
