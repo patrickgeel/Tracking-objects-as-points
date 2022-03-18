@@ -1,3 +1,4 @@
+data/
 videos/
 *.zip
 centernet_models/*
