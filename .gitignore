@@ -5,11 +5,11 @@ centernet_models/*
 centertrack_models/*
 */slurm-*.out
 src/slurm/
-src/lib/models/networks/DCNv2_04
-src/lib/models/networks/DCNv2_10
-src/lib/model/networks/DCNv2
-src/lib/model/networks/DCNv2_04
-src/lib/model/networks/DCNv2_10
+#src/lib/models/networks/DCNv2_04
+#src/lib/models/networks/DCNv2_10
+#src/lib/model/networks/DCNv2
+#src/lib/model/networks/DCNv2_04
+#src/lib/model/networks/DCNv2_10
 .idea/
 legacy/*
 .DS_Store
