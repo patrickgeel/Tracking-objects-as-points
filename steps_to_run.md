@@ -9,20 +9,33 @@ git config --global credential.helper store
 
 
 # Running setup steps, this should only be done once. REPLACE PATRICK WITH YOUR OWN NAME 
+
 cd Tracking-objects-as-points
+
 conda activate CenterTrack
+
 git checkout --track -b patrick remotes/origin/patrick 
+
 cd src/lib/model/networks
+
 git clone https://github.com/CharlesShang/DCNv2/
+
 cd DCNv2
+
 rm -rf build
+
 ./make.sh
+
 cd ~/Tracking-objects-as-points
 
 # Setup for the data folder 
+
 mkdir data
+
 cd src/tools
+
 bash get_mot_17.sh
+
 cd ~/Tracking-objects-as-points/data
 
 
