@@ -30,6 +30,7 @@ cd Tracking-objects-as-points
 ~~~
 ~~~
 git checkout --track -b patrick remotes/origin/patrick 
+pip install -r requirements.txt
 ~~~
 ~~~
 cd src/lib/model/networks
