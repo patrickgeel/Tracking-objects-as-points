@@ -12,7 +12,6 @@ src/lib/model/networks/DCNv2_04
 src/lib/model/networks/DCNv2_10
 .idea/
 legacy/*
-models/*
 .DS_Store
 debug/*
 *.DS_Store
