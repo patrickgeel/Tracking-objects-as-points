@@ -50,7 +50,7 @@ cd ~/Tracking-objects-as-points
 mkdir data
 cd src/tools
 bash get_mot_17.sh
-cd ~/Tracking-objects-as-points/data
+cd ~/Tracking-objects-as-points/data/mot17
 mv MOT17/train/ . && mv MOT17/test/ . && rm -rf MOT17
 cd ~/Tracking-objects-as-points/src/tools
 python convert_mot_to_coco.py
