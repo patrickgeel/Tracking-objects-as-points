@@ -16,8 +16,9 @@ pip install cython; pip install -U 'git+https://github.com/cocodataset/cocoapi.g
 git clone https://github.com/patrickgeel/Tracking-objects-as-points.git
 ~~~
 ## This command stores your credentials so that you do not have to log in every time
+~~~
 git config --global credential.helper store
-
+~~~
 
 ## Running setup steps, this should only be done once. REPLACE PATRICK WITH YOUR OWN NAME 
 ~~~
