@@ -15,7 +15,6 @@ legacy/*
 .DS_Store
 debug/*
 *.DS_Store
-data
 !src/tools/eval_kitti_track/data
 exp
 exp/*
