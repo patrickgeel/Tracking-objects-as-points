@@ -4,7 +4,6 @@ centernet_models/*
 centertrack_models/*
 */slurm-*.out
 src/slurm/
-results/*
 src/lib/models/networks/DCNv2
 src/lib/models/networks/DCNv2_04
 src/lib/models/networks/DCNv2_10
@@ -29,7 +28,6 @@ src/.vscode/*
 src/paths.py
 preds/*
 *.h5
-*.pth
 *.checkpoint
 # Byte-compiled / optimized / DLL files
 __pycache__/
