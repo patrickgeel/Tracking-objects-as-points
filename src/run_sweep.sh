@@ -1,18 +1,18 @@
 #!/bin/bash 
 
-echo "Enter run name: "  
-read exp_id  
-echo "Enter number of epochs: "  
-read num_epochs
-echo "Enter batch size: "  
-read batch_size
-echo "Enter lr step: "  
-read lr_step
+# echo "Enter run name: "  
+# read exp_id  
+# echo "Enter number of epochs: "  
+# read num_epochs
+# echo "Enter batch size: "  
+# read batch_size
+# echo "Enter lr step: "  
+# read lr_step
 
-echo "Exp Id: $exp_id"
-echo "Epochs: $num_epochs"
-echo "Batch size: $batch_size"
-echo "Lr Step: $lr_step"
+# echo "Exp Id: $exp_id"
+# echo "Epochs: $num_epochs"
+# echo "Batch size: $batch_size"
+# echo "Lr Step: $lr_step"
 
 #Train the model
 python main.py tracking --exp_id "$exp_id" --dataset mot --dataset_version 17halftrain --num_epochs "$num_epochs" --batch_size "$batch_size" --lr_step "$lr_step"
