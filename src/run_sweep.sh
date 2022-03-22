@@ -35,13 +35,10 @@ fi
 echo "Setup logging directory"
 
 mkdir -p ../data_logging/
-script ../data_logging/"$exp_id.txt"
-echo "Logging directory is ../data_logging/$exp_id.txt"
 
 # Run test on the trained model
-python test.py tracking --exp_id "$exp_id" --dataset mot --dataset_version 17halfval --track_thresh 0.4 --pre_thresh 0.5 --load_model ../exp//tracking/"$exp_id"/model_last.pth
+python test.py tracking --exp_id "$exp_id" --dataset mot --dataset_version 17halfval --track_thresh 0.4 --pre_thresh 0.5 --load_model ../exp//tracking/"$exp_id"/model_last.pth | tee ../data_logging/"$exp_id.txt"
 # Stop logging
-exit
 
 # git add ../data_logging/"$exp_id.txt"
 # git commit -m "Run $exp_id is complete"
