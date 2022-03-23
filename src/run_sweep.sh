@@ -43,3 +43,5 @@ python test.py tracking --exp_id "$exp_id" --dataset mot --dataset_version 17hal
 git add ../data_logging/"$exp_id.txt"
 git commit -m "Run $exp_id is complete"
 git push
+
+sudo poweroff
