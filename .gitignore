@@ -16,8 +16,8 @@ legacy/*
 debug/*
 *.DS_Store
 !src/tools/eval_kitti_track/data
-exp
-exp/*
+#exp
+#exp/*
 *.json
 *.mat
 src/.vscode/*
