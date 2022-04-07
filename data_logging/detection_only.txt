@@ -1,0 +1,82 @@
+Using tensorboardX
+Running tracking
+Using tracking threshold for out threshold! 0.4
+Fix size testing.
+training chunk_sizes: [32]
+input h w: 544 960
+heads {'hm': 1, 'reg': 2, 'wh': 2, 'tracking': 2}
+weights {'hm': 1, 'reg': 1, 'wh': 0.1, 'tracking': 1}
+head conv {'hm': [256], 'reg': [256], 'wh': [256], 'tracking': [256]}
+Namespace(K=100, add_05=False, amodel_offset_weight=1, arch='dla_34', aug_rot=0, backbone='dla34', batch_size=32, chunk_sizes=[32], custom_dataset_ann_path='', custom_dataset_img_path='', data_dir='/home/patrickgeel10/Tracking-objects-as-points/src/lib/../../data', dataset='mot', dataset_version='17halfval', debug=0, debug_dir='/home/patrickgeel10/Tracking-objects-as-points/src/lib/../../exp/tracking/detection_only/debug', debugger_theme='white', demo='', dense_reg=1, dep_weight=1, depth_scale=1, dim_weight=1, dla_node='dcn', down_ratio=4, efficient_level=0, eval_val=False, exp_dir='/home/patrickgeel10/Tracking-objects-as-points/src/lib/../../exp/tracking', exp_id='detection_only', fix_res=True, fix_short=-1, flip=0.5, flip_test=False, fp_disturb=0, gpus=[0], gpus_str='0', head_conv={'hm': [256], 'reg': [256], 'wh': [256], 'tracking': [256]}, head_kernel=3, heads={'hm': 1, 'reg': 2, 'wh': 2, 'tracking': 2}, hm_disturb=0, hm_hp_weight=1, hm_weight=1, hp_weight=1, hungarian=False, ignore_loaded_cats=[], input_h=544, input_res=960, input_w=960, keep_res=False, kitti_split='3dop', load_model='../models/mot17_fulltrain.pth', load_results='', lost_disturb=0, lr=0.000125, lr_step=[60], ltrb=False, ltrb_amodal=False, ltrb_amodal_weight=0.1, ltrb_weight=0.1, map_argoverse_id=False, master_batch_size=32, max_age=-1, max_frame_dist=3, model_output_list=False, msra_outchannel=256, neck='dlaup', new_thresh=0.4, nms=False, no_color_aug=False, no_pause=False, no_pre_img=False, non_block_test=False, not_cuda_benchmark=False, not_idaup=False, not_max_crop=False, not_prefetch_test=False, not_rand_crop=False, not_set_cuda_env=False, not_show_bbox=False, not_show_number=False, not_show_txt=False, num_classes=1, num_epochs=70, num_head_conv=1, num_iters=-1, num_layers=101, num_stacks=1, num_workers=4, nuscenes_att=False, nuscenes_att_weight=1, off_weight=1, only_show_dots=False, optim='adam', out_thresh=0.4, output_h=136, output_res=240, output_w=240, pad=31, pre_hm=False, pre_img=True, pre_thresh=0.5, print_iter=0, prior_bias=-4.6, public_det=False, qualitative=False, reg_loss='l1', reset_hm=False, resize_video=False, resume=False, reuse_hm=False, root_dir='/home/patrickgeel10/Tracking-objects-as-points/src/lib/../..', rot_weight=1, rotate=0, same_aug_pre=False, save_all=False, save_dir='/home/patrickgeel10/Tracking-objects-as-points/src/lib/../../exp/tracking/detection_only', save_framerate=30, save_img_suffix='', save_imgs=[], save_point=[90], save_results=False, save_video=False, scale=0, seed=317, shift=0, show_trace=False, show_track_color=False, skip_first=-1, tango_color=False, task='tracking', test=False, test_dataset='mot', test_focal_length=-1, test_scales=[1.0], track_thresh=0.4, tracking=True, tracking_weight=1, trainval=False, transpose_video=False, use_kpt_center=False, use_loaded_results=False, val_intervals=10000, velocity=False, velocity_weight=1, video_h=512, video_w=512, vis_gt_bev='', vis_thresh=0.3, weights={'hm': 1, 'reg': 1, 'wh': 0.1, 'tracking': 1}, wh_weight=0.1, zero_pre_hm=False, zero_tracking=False)
+Using MOT 17 17halfval
+ann_file val_half.json
+==> initializing val data from /home/patrickgeel10/Tracking-objects-as-points/src/lib/../../data/mot17/annotations/val_half.json, 
+ images from /home/patrickgeel10/Tracking-objects-as-points/src/lib/../../data/mot17/train ...
+loading annotations into memory...
+Done (t=0.30s)
+creating index...
+index created!
+Creating video index!
+Loaded MOT 17halfval val 2652 samples
+Creating model...
+Using node type: (<class 'model.networks.dla.DeformConv'>, <class 'model.networks.dla.DeformConv'>)
+Warning: No ImageNet pretrain!!
+loaded ../models/mot17_fulltrain.pth, epoch 70
+Drop parameter ltrb_amodal.0.weight.
+Drop parameter ltrb_amodal.0.bias.
+Drop parameter ltrb_amodal.2.weight.
+Drop parameter ltrb_amodal.2.bias.
+Drop parameter base.pre_hm_layer.0.weight.
+Drop parameter base.pre_hm_layer.1.weight.
+Drop parameter base.pre_hm_layer.1.bias.
+Drop parameter base.pre_hm_layer.1.running_mean.
+Drop parameter base.pre_hm_layer.1.running_var.
+Drop parameter base.pre_hm_layer.1.num_batches_tracked.
+gt_type _val_half
+gt_files ['../data/mot17/train/MOT17-04-FRCNN/gt/gt_val_half.txt', '../data/mot17/train/MOT17-02-FRCNN/gt/gt_val_half.txt', '../data/mot17/train/MOT17-13-FRCNN/gt/gt_val_half.txt', '../data/mot17/train/MOT17-05-FRCNN/gt/gt_val_half.txt', '../data/mot17/train/MOT17-10-FRCNN/gt/gt_val_half.txt', '../data/mot17/train/MOT17-09-FRCNN/gt/gt_val_half.txt', '../data/mot17/train/MOT17-11-FRCNN/gt/gt_val_half.txt']
+                Rcll  Prcn  GT    MT    PT    ML    FP    FN  IDs   FM  MOTA  MOTP num_objects
+MOT17-13-FRCNN 81.8% 92.2%  44 59.1% 31.8%  9.1%  6.9% 18.2% 3.5% 3.1% 71.4% 0.208        3156
+MOT17-02-FRCNN 40.3% 95.9%  53 18.9% 41.5% 39.6%  1.7% 59.7% 1.4% 1.3% 37.2% 0.157        9880
+MOT17-11-FRCNN 67.2% 93.5%  44 27.3% 52.3% 20.5%  4.7% 32.8% 1.1% 1.2% 61.4% 0.117        4517
+MOT17-05-FRCNN 59.6% 84.6%  71 23.9% 60.6% 15.5% 10.9% 40.4% 2.4% 2.1% 46.3% 0.191        3357
+MOT17-10-FRCNN 73.7% 94.1%  36 44.4% 52.8%  2.8%  4.6% 26.3% 3.0% 3.6% 66.1% 0.213        5923
+MOT17-04-FRCNN 73.3% 90.0%  69 42.0% 44.9% 13.0%  8.1% 26.7% 0.7% 0.9% 64.5% 0.145       24178
+MOT17-09-FRCNN 66.0% 94.9%  22 45.5% 40.9% 13.6%  3.5% 34.0% 1.5% 1.4% 61.0% 0.146        2879
+OVERALL        66.0% 91.5% 339 35.4% 47.5% 17.1%  6.1% 34.0% 1.4% 1.5% 58.5% 0.159       53890
+                IDF1   IDP   IDR  Rcll  Prcn  GT  MT  PT ML   FP    FN IDs   FM  MOTA  MOTP IDt IDa IDm num_objects
+MOT17-13-FRCNN 65.6% 69.8% 61.9% 81.8% 92.2%  44  26  14  4  218   574 110   99 71.4% 0.208  24  90   4        3156
+MOT17-02-FRCNN 37.5% 63.4% 26.7% 40.3% 95.9%  53  10  22 21  169  5897 134  133 37.2% 0.157  15 121   2        9880
+MOT17-11-FRCNN 56.6% 67.6% 48.6% 67.2% 93.5%  44  12  23  9  211  1483  50   54 61.4% 0.117   3  47   0        4517
+MOT17-05-FRCNN 55.4% 67.0% 47.2% 59.6% 84.6%  71  17  43 11  365  1357  81   71 46.3% 0.191  27  66  12        3357
+MOT17-10-FRCNN 49.5% 56.4% 44.1% 73.7% 94.1%  36  16  19  1  275  1558 176  211 66.1% 0.213  50 129   4        5923
+MOT17-04-FRCNN 72.8% 81.1% 66.0% 73.3% 90.0%  69  29  31  9 1960  6460 162  224 64.5% 0.145  13 152   3       24178
+MOT17-09-FRCNN 61.9% 75.4% 52.4% 66.0% 94.9%  22  10   9  3  102   979  43   40 61.0% 0.146   9  35   1        2879
+OVERALL        61.3% 73.2% 52.8% 66.0% 91.5% 339 120 161 58 3300 18308 756  832 58.5% 0.159 141 640  26       53890
+
+No pre_dets for 302 . Use empty initialization.
+Start tracking video 1
+Initialize tracking!
+
+No pre_dets for 1127 . Use empty initialization.
+Start tracking video 2
+Initialize tracking!
+
+No pre_dets for 2070 . Use empty initialization.
+Start tracking video 3
+Initialize tracking!
+
+No pre_dets for 2751 . Use empty initialization.
+Start tracking video 4
+Initialize tracking!
+
+No pre_dets for 3341 . Use empty initialization.
+Start tracking video 5
+Initialize tracking!
+
+No pre_dets for 4118 . Use empty initialization.
+Start tracking video 6
+Initialize tracking!
+
+No pre_dets for 4943 . Use empty initialization.
+Start tracking video 7
+Initialize tracking!
