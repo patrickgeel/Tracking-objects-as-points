@@ -1,0 +1,157 @@
+==> commit hash: b'317af82\n'
+==> torch version: 1.4.0
+==> cudnn version: 7603
+==> Cmd:
+['main.py', 'tracking', '--exp_id', 'adam', '--dataset', 'mot', '--dataset_version', '17halftrain', '--pre_hm', '--ltrb_amodal', '--same_aug', '--hm_disturb', '0.05', '--lost_disturb', '0.4', '--fp_disturb', '0.1', '--num_epochs', '70', '--batch_size', '12', '--lr_step', '60']
+==> Opt:
+  K: 100
+  add_05: False
+  amodel_offset_weight: 1
+  arch: dla_34
+  aug_rot: 0
+  backbone: dla34
+  batch_size: 12
+  chunk_sizes: [12]
+  custom_dataset_ann_path: 
+  custom_dataset_img_path: 
+  data_dir: /home/patrickgeel10/Tracking-objects-as-points/src/lib/../../data
+  dataset: mot
+  dataset_version: 17halftrain
+  debug: 0
+  debug_dir: /home/patrickgeel10/Tracking-objects-as-points/src/lib/../../exp/tracking/adam/debug
+  debugger_theme: white
+  demo: 
+  dense_reg: 1
+  dep_weight: 1
+  depth_scale: 1
+  device: cuda
+  dim_weight: 1
+  dla_node: dcn
+  down_ratio: 4
+  efficient_level: 0
+  eval_val: False
+  exp_dir: /home/patrickgeel10/Tracking-objects-as-points/src/lib/../../exp/tracking
+  exp_id: adam
+  fix_res: True
+  fix_short: -1
+  flip: 0.5
+  flip_test: False
+  fp_disturb: 0.1
+  gpus: [0]
+  gpus_str: 0
+  head_conv: {'hm': [256], 'reg': [256], 'wh': [256], 'tracking': [256], 'ltrb_amodal': [256]}
+  head_kernel: 3
+  heads: {'hm': 1, 'reg': 2, 'wh': 2, 'tracking': 2, 'ltrb_amodal': 4}
+  hm_disturb: 0.05
+  hm_hp_weight: 1
+  hm_weight: 1
+  hp_weight: 1
+  hungarian: False
+  ignore_loaded_cats: []
+  input_h: 544
+  input_res: 960
+  input_w: 960
+  keep_res: False
+  kitti_split: 3dop
+  load_model: 
+  load_results: 
+  lost_disturb: 0.4
+  lr: 0.000125
+  lr_step: [60]
+  ltrb: False
+  ltrb_amodal: True
+  ltrb_amodal_weight: 0.1
+  ltrb_weight: 0.1
+  map_argoverse_id: False
+  master_batch_size: 12
+  max_age: -1
+  max_frame_dist: 3
+  model_output_list: False
+  msra_outchannel: 256
+  neck: dlaup
+  new_thresh: 0.3
+  nms: False
+  no_color_aug: False
+  no_pause: False
+  no_pre_img: False
+  non_block_test: False
+  not_cuda_benchmark: False
+  not_idaup: False
+  not_max_crop: False
+  not_prefetch_test: False
+  not_rand_crop: False
+  not_set_cuda_env: False
+  not_show_bbox: False
+  not_show_number: False
+  not_show_txt: False
+  num_classes: 1
+  num_epochs: 70
+  num_head_conv: 1
+  num_iters: -1
+  num_layers: 101
+  num_stacks: 1
+  num_workers: 4
+  nuscenes_att: False
+  nuscenes_att_weight: 1
+  off_weight: 1
+  only_show_dots: False
+  optim: adam
+  out_thresh: 0.3
+  output_h: 136
+  output_res: 240
+  output_w: 240
+  pad: 31
+  pre_hm: True
+  pre_img: True
+  pre_thresh: 0.3
+  print_iter: 0
+  prior_bias: -4.6
+  public_det: False
+  qualitative: False
+  reg_loss: l1
+  reset_hm: False
+  resize_video: False
+  resume: False
+  reuse_hm: False
+  root_dir: /home/patrickgeel10/Tracking-objects-as-points/src/lib/../..
+  rot_weight: 1
+  rotate: 0
+  same_aug_pre: True
+  save_all: False
+  save_dir: /home/patrickgeel10/Tracking-objects-as-points/src/lib/../../exp/tracking/adam
+  save_framerate: 30
+  save_img_suffix: 
+  save_imgs: []
+  save_point: [90]
+  save_results: False
+  save_video: False
+  scale: 0
+  seed: 317
+  shift: 0
+  show_trace: False
+  show_track_color: False
+  skip_first: -1
+  tango_color: False
+  task: tracking
+  test: False
+  test_dataset: mot
+  test_focal_length: -1
+  test_scales: [1.0]
+  track_thresh: 0.3
+  tracking: True
+  tracking_weight: 1
+  trainval: False
+  transpose_video: False
+  use_kpt_center: False
+  use_loaded_results: False
+  val_intervals: 10000
+  velocity: False
+  velocity_weight: 1
+  video_h: 512
+  video_w: 512
+  vis_gt_bev: 
+  vis_thresh: 0.3
+  weights: {'hm': 1, 'reg': 1, 'wh': 0.1, 'tracking': 1, 'ltrb_amodal': 0.1}
+  wh_weight: 0.1
+  zero_pre_hm: False
+  zero_tracking: False
