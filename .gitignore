@@ -25,7 +25,7 @@ src/paths.py
 preds/*
 *.h5
 *.checkpoint
-# *.pth
+ *.pth
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
