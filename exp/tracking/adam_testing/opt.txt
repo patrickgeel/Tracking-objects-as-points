@@ -1,8 +1,8 @@
-==> commit hash: b'317af82\n'
+==> commit hash: b'89f572f\n'
 ==> torch version: 1.4.0
 ==> cudnn version: 7603
 ==> Cmd:
-['test.py', 'tracking', '--exp_id', 'adam_testing', '--dataset', 'mot', '--dataset_version', '17halfval', '--track_thresh', '0.4', '--pre_thresh', '0.5', '--load_model', '../exp/tracking/adam/model_last.pth']
+['test.py', 'tracking', '--exp_id', 'adam_testing', '--dataset', 'mot', '--dataset_version', '17halfval', '--track_thresh', '0.4', '--pre_thresh', '0.5', '--load_model', '../models/adam_model.pth']
 ==> Opt:
   K: 100
   add_05: False
@@ -52,7 +52,7 @@
   input_w: 960
   keep_res: False
   kitti_split: 3dop
-  load_model: ../exp/tracking/adam/model_last.pth
+  load_model: ../models/adam_model.pth
   load_results: 
   lost_disturb: 0
   lr: 0.000125

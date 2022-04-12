@@ -1,4 +1,4 @@
-==> commit hash: b'0b1aba8\n'
+==> commit hash: b'89f572f\n'
 ==> torch version: 1.4.0
 ==> cudnn version: 7603
 ==> Cmd:
