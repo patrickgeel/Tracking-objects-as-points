@@ -1,8 +1,8 @@
-==> commit hash: b'c05f456\n'
+==> commit hash: b'0b1aba8\n'
 ==> torch version: 1.4.0
 ==> cudnn version: 7603
 ==> Cmd:
-['main.py', 'tracking', '--exp_id', 'run2_tensorboard_training', '--dataset', 'mot', '--dataset_version', '17halftrain', '--pre_hm', '--ltrb_amodal', '--same_aug', '--hm_disturb', '0.05', '--lost_disturb', '0.4', '--fp_disturb', '0.1', '--num_epochs', '70', '--batch_size', '12', '--lr_step', '60', '--optim', 'sgd', '--load_model', '../exp/tracking/run2_tensorboard_training/model_last.pth', '--resume', '--save_all']
+['test.py', 'tracking', '--exp_id', 'SGD_testing', '--dataset', 'mot', '--dataset_version', '17halfval', '--track_thresh', '0.4', '--pre_thresh', '0.5', '--load_model', '../models/SGD_model.pth']
 ==> Opt:
   K: 100
   add_05: False
@@ -10,39 +10,38 @@
   arch: dla_34
   aug_rot: 0
   backbone: dla34
-  batch_size: 12
-  chunk_sizes: [12]
+  batch_size: 32
+  chunk_sizes: [32]
   custom_dataset_ann_path: 
   custom_dataset_img_path: 
   data_dir: /home/patrickgeel10/Tracking-objects-as-points/src/lib/../../data
   dataset: mot
-  dataset_version: 17halftrain
+  dataset_version: 17halfval
   debug: 0
-  debug_dir: /home/patrickgeel10/Tracking-objects-as-points/src/lib/../../exp/tracking/run2_tensorboard_training/debug
+  debug_dir: /home/patrickgeel10/Tracking-objects-as-points/src/lib/../../exp/tracking/SGD_testing/debug
   debugger_theme: white
   demo: 
   dense_reg: 1
   dep_weight: 1
   depth_scale: 1
-  device: cuda
   dim_weight: 1
   dla_node: dcn
   down_ratio: 4
   efficient_level: 0
   eval_val: False
   exp_dir: /home/patrickgeel10/Tracking-objects-as-points/src/lib/../../exp/tracking
-  exp_id: run2_tensorboard_training
+  exp_id: SGD_testing
   fix_res: True
   fix_short: -1
   flip: 0.5
   flip_test: False
-  fp_disturb: 0.1
+  fp_disturb: 0
   gpus: [0]
   gpus_str: 0
-  head_conv: {'hm': [256], 'reg': [256], 'wh': [256], 'tracking': [256], 'ltrb_amodal': [256]}
+  head_conv: {'hm': [256], 'reg': [256], 'wh': [256], 'tracking': [256]}
   head_kernel: 3
-  heads: {'hm': 1, 'reg': 2, 'wh': 2, 'tracking': 2, 'ltrb_amodal': 4}
-  hm_disturb: 0.05
+  heads: {'hm': 1, 'reg': 2, 'wh': 2, 'tracking': 2}
+  hm_disturb: 0
   hm_hp_weight: 1
   hm_weight: 1
   hp_weight: 1
@@ -53,23 +52,23 @@
   input_w: 960
   keep_res: False
   kitti_split: 3dop
-  load_model: ../exp/tracking/run2_tensorboard_training/model_last.pth
+  load_model: ../models/SGD_model.pth
   load_results: 
-  lost_disturb: 0.4
+  lost_disturb: 0
   lr: 0.000125
   lr_step: [60]
   ltrb: False
-  ltrb_amodal: True
+  ltrb_amodal: False
   ltrb_amodal_weight: 0.1
   ltrb_weight: 0.1
   map_argoverse_id: False
-  master_batch_size: 12
+  master_batch_size: 32
   max_age: -1
   max_frame_dist: 3
   model_output_list: False
   msra_outchannel: 256
   neck: dlaup
-  new_thresh: 0.3
+  new_thresh: 0.4
   nms: False
   no_color_aug: False
   no_pause: False
@@ -95,15 +94,15 @@
   nuscenes_att_weight: 1
   off_weight: 1
   only_show_dots: False
-  optim: sgd
-  out_thresh: 0.3
+  optim: adam
+  out_thresh: 0.4
   output_h: 136
   output_res: 240
   output_w: 240
   pad: 31
-  pre_hm: True
+  pre_hm: False
   pre_img: True
-  pre_thresh: 0.3
+  pre_thresh: 0.5
   print_iter: 0
   prior_bias: -4.6
   public_det: False
@@ -111,14 +110,14 @@
   reg_loss: l1
   reset_hm: False
   resize_video: False
-  resume: True
+  resume: False
   reuse_hm: False
   root_dir: /home/patrickgeel10/Tracking-objects-as-points/src/lib/../..
   rot_weight: 1
   rotate: 0
-  same_aug_pre: True
-  save_all: True
-  save_dir: /home/patrickgeel10/Tracking-objects-as-points/src/lib/../../exp/tracking/run2_tensorboard_training
+  same_aug_pre: False
+  save_all: False
+  save_dir: /home/patrickgeel10/Tracking-objects-as-points/src/lib/../../exp/tracking/SGD_testing
   save_framerate: 30
   save_img_suffix: 
   save_imgs: []
@@ -137,7 +136,7 @@
   test_dataset: mot
   test_focal_length: -1
   test_scales: [1.0]
-  track_thresh: 0.3
+  track_thresh: 0.4
   tracking: True
   tracking_weight: 1
   trainval: False
@@ -151,7 +150,7 @@
   video_w: 512
   vis_gt_bev: 
   vis_thresh: 0.3
-  weights: {'hm': 1, 'reg': 1, 'wh': 0.1, 'tracking': 1, 'ltrb_amodal': 0.1}
+  weights: {'hm': 1, 'reg': 1, 'wh': 0.1, 'tracking': 1}
   wh_weight: 0.1
   zero_pre_hm: False
   zero_tracking: False
